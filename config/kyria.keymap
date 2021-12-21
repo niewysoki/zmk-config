@@ -14,46 +14,104 @@
 		BASE_LAYER {
 			label = "Base";
 			bindings = <
-	// TOP LEFT
+	// TOP LEFT (0 - 5)
 		&none 
 		&kp Q &kp W &kp F &kp P &kp B 
 
-	// TOP RIGHT
+	// TOP RIGHT (6 - 11)
 		&kp J &kp L &kp U &kp Y &kp SQT 
 		&none
 
-	// MIDDLE LEFT
+	// MIDDLE LEFT (12 - 17)
 		&none 
-		&kp A &kp R &kp S &kp T &kp G
+		&hm LGUI A &hm LALT R &hm LCTL S &hm LSHFT T &kp G
 
-	// MIDDLE RIGHT
-		&kp M &kp N &kp E &kp I &kp O 
+	// MIDDLE RIGHT (18 - 23)
+		&kp M &hm LSHFT N &hm LCTL E &hm LALT I &hm LGUI O 
 		&none
 
-	// BOTTOM LEFT
+	// BOTTOM LEFT (24 - 29)
 		&none 
-		&kp Z &kp X &kp C &kp D &kp V
+		&kp Z &hm RALT X &kp C &kp D &kp V
 	
-	// UPPER THUMB LEFT - RIGHT
+	// UPPER THUMB LEFT - RIGHT (30 - 33)
 		&kp LSHFT &kp LSHFT &kp LSHFT &kp LSHFT
 
-	// BOTTOM RIGHT
-		&kp K &kp H  &kp COMMA &kp DOT &kp FSLH 
+	// BOTTOM RIGHT (34 - 39)
+		&kp K &kp H &kp COMMA &hm RALT DOT &kp FSLH 
 		&none
 
-	// THUMB LEFT
+	// THUMB LEFT (40 - 44)
 		&kp LSHFT &kp LSHFT &kp ESC &kp SPACE &kp TAB
 
-	// THUMB RIGHT
+	// THUMB RIGHT (45 - 49)
 		&kp RET &kp BSPC &kp DEL &kp LSHFT &kp LSHFT
 			>;
 
 			sensor-bindings = <
 	// LEFT ENCODER
-		&inc_dec_kp C_VOL_UP C_VOL_DN 
+		&inc_dec_kp PG_UP PG_DN 
 	// RIGHT ENCODER
 		&inc_dec_kp PG_UP PG_DN
 			>;	
 		};
+	};
+
+	/ {
+		behaviors {
+			hm: homerow_mods {
+				compatible = "zmk,behavior-hold-tap";
+				label = "HOMEROW MODS";
+				#binding-cells = <2>;
+				tapping_term_ms = <150>;
+				quick_tap_ms = <0>;
+				flavor = "tap-preferred";
+				bindings = <&kp>, <&kp>;
+			};
+
+			bhm: balanced_homerow_mods {
+				compatible = "zmk,behavior-hold-tap";
+				label = "BALANCED_HOMEROW_MODS";
+				#binding-cells = <2>;
+				tapping-term-ms = <200>;
+				quick_tap_ms = <0>;
+				flavor = "balanced";
+				bindings = <&kp>, <&kp>;
+        	};
+		};
+	};
+
+	/ {
+		combos {
+			compatible = "zmk,combos";
+			combo_lpar {
+				timeout-ms = <50>;
+				key-positions = <4 16>;
+				bindings = <&kp LPAR>;
+        	};
+
+			combo_rpar {
+				timeout-ms = <50>;
+				key-positions = <7 19>;
+				bindings = <&kp RPAR>;
+			};
+
+			combo_lbkt {
+				timeout-ms = <50>;
+				key-positions = <5 17>;
+				bindings = <&kp LBKT>;
+			};
+
+			combo_rbkt {
+				timeout-ms = <50>;
+				key-positions = <6 18>;
+				bindings = <&kp RBKT>;
+			};
+		};
+	};
+
+	&caps_word {
+    	continue-list = <UNDERSCORE MINUS>;
+		mods = <LSHFT>;
 	};
 };
