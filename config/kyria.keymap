@@ -17,8 +17,8 @@
 	// Base layer for alphanumeric input (0)
 		BASE_LAYER {
 			label = "Base";
-			bindings = base_bindings;
-			sensor-bindings = base_sensor_bindings;
+			bindings = <base_bindings>;
+			sensor-bindings = <base_sensor_bindings>;
 		};
 	};
 };
