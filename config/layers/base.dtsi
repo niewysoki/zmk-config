@@ -1,4 +1,8 @@
-base_bindings = <
+#include <dt-bindings/zmk/keys.h>
+#include "homerow.dtsi"
+
+
+&base_bindings = <
 // TOP LEFT (0 - 5)
     &none 
     &kp Q &kp W &kp F &kp P &kp B 
@@ -33,7 +37,7 @@ base_bindings = <
     &kp RET &kp BSPC &kp DEL &kp RALT &kp LSHFT
 >;
 
-base_sensor_bindings = <
+&base_sensor_bindings = <
 // LEFT ENCODER
     &inc_dec_kp PG_UP PG_DN 
 // RIGHT ENCODER

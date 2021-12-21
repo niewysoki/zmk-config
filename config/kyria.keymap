@@ -7,8 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include "homerow.dtsi"
-#include "kyria_combos.dtsi"
 #include "layers/base.dtsi"
+#include "kyria_combos.dtsi"
 
 / {
 	keymap {
@@ -17,8 +17,8 @@
 	// Base layer for alphanumeric input (0)
 		BASE_LAYER {
 			label = "Base";
-			bindings = <base_bindings>;
-			sensor-bindings = <base_sensor_bindings>;
+			bindings = &base_bindings;
+			sensor-bindings = &base_sensor_bindings;
 		};
 	};
 };
