@@ -9,35 +9,32 @@
 #include "homerow.dtsi"
 #include "kyria_combos.dtsi"
 
-#define U_BASE \
-    &none \
-    &kp Q &kp W &kp F &kp P &kp B \
-    &kp J &kp L &kp U &kp Y &kp SQT \
-    &none \
-    &none \
-    &hm LGUI A &hm LALT R &hm LCTL S &hm LSHFT T &kp G \
-    &kp M &hm LSHFT N &hm LCTL E &hm LALT I &hm LGUI O \
-    &none \
-    &none \
-    &kp Z &kp x &kp C &kp D &kp V \
-    &kp LSHFT &kp LSHFT &kp LSHFT &kp LSHFT \
-    &kp K &kp H &kp COMMA &kp DOT &kp FSLH \
-    &none \
-    &kp LSHFT &kp RALT &kp ESC &kp SPACE &kp TAB \
-    &kp RET &kp BSPC &kp DEL &kp RALT &kp LSHFT
-
-#define U_BASE_SENSOR \
-    &inc_dec_kp PG_UP PG_DN \
-    &inc_dec_kp PG_UP PG_DN
-
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
 		BASE_LAYER {
 			label = "Base";
-			bindings = <U_BASE>;
-			sensor-bindings = <U_BASE_SENSOR>;
+			bindings = <
+	&none 
+    &kp Q &kp W &kp F &kp P &kp B 
+    &kp J &kp L &kp U &kp Y &kp SQT 
+    &none 
+    &none 
+    &hm LGUI A &hm LALT R &hm LCTL S &hm LSHFT T &kp G 
+    &kp M &hm LSHFT N &hm LCTL E &hm LALT I &hm LGUI O 
+    &none 
+    &none 
+    &kp Z &kp x &kp C &kp D &kp V 
+    &kp LSHFT &kp LSHFT &kp LSHFT &kp LSHFT 
+    &kp K &kp H &kp COMMA &kp DOT &kp FSLH 
+    &none 
+    &kp LSHFT &kp RALT &kp ESC &kp SPACE &kp TAB 
+    &kp RET &kp BSPC &kp DEL &kp RALT &kp LSHFT
+			>;
+			sensor-bindings = <    
+	&inc_dec_kp PG_UP PG_DN 
+    &inc_dec_kp PG_UP PG_DN
+			>;
 		};
 	};
 };
