@@ -7,18 +7,16 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include "homerow.dtsi"
-#include "layers/base.dtsi"
+#include "layers/base.h"
 #include "kyria_combos.dtsi"
 
 / {
 	keymap {
 		compatible = "zmk,keymap";
-
-	// Base layer for alphanumeric input (0)
 		BASE_LAYER {
 			label = "Base";
-			bindings = &base_bindings;
-			sensor-bindings = &base_sensor_bindings;
+			bindings = <U_BASE>;
+			sensor-bindings = <U_BASE_SENSOR>;
 		};
 	};
 };
