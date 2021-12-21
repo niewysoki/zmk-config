@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include "homerow.dtsi"
 #include "kyria_combos.dtsi"
+#include "layers/base.dtsi"
 
 / {
 	keymap {
@@ -16,47 +17,8 @@
 	// Base layer for alphanumeric input (0)
 		BASE_LAYER {
 			label = "Base";
-			bindings = <
-	// TOP LEFT (0 - 5)
-		&none 
-		&kp Q &kp W &kp F &kp P &kp B 
-
-	// TOP RIGHT (6 - 11)
-		&kp J &kp L &kp U &kp Y &kp SQT 
-		&none
-
-	// MIDDLE LEFT (12 - 17)
-		&none 
-		&hm LGUI A &hm LALT R &hm LCTL S &hm LSHFT T &kp G
-
-	// MIDDLE RIGHT (18 - 23)
-		&kp M &hm LSHFT N &hm LCTL E &hm LALT I &hm LGUI O 
-		&none
-
-	// BOTTOM LEFT (24 - 29)
-		&none 
-		&kp Z &hm RALT X &kp C &kp D &kp V
-	
-	// UPPER THUMB LEFT - RIGHT (30 - 33)
-		&kp LSHFT &kp LSHFT &kp LSHFT &kp LSHFT
-
-	// BOTTOM RIGHT (34 - 39)
-		&kp K &kp H &kp COMMA &hm RALT DOT &kp FSLH 
-		&none
-
-	// THUMB LEFT (40 - 44)
-		&kp LSHFT &kp LSHFT &kp ESC &kp SPACE &kp TAB
-
-	// THUMB RIGHT (45 - 49)
-		&kp RET &kp BSPC &kp DEL &kp LSHFT &kp LSHFT
-			>;
-
-			sensor-bindings = <
-	// LEFT ENCODER
-		&inc_dec_kp PG_UP PG_DN 
-	// RIGHT ENCODER
-		&inc_dec_kp PG_UP PG_DN
-			>;	
-		};	
+			bindings = base_bindings;
+			sensor-bindings = base_sensor_bindings;
+		};
 	};
 };
