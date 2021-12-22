@@ -9,3 +9,9 @@
 #include "homerow.dtsi"
 #include "kyria_combos.dtsi"
 #include "layers/base.dtsi"
+
+\ {
+	keymap {
+		compatible = "zmk,keymap";
+	}
+}

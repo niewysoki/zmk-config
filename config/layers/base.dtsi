@@ -1,6 +1,5 @@
 / {
 	keymap {
-		compatible = "zmk,keymap";
 	    // Base layer for alphanumeric input (0)
 		BASE_LAYER {
 			label = "Base";
