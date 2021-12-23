@@ -18,7 +18,7 @@
 
             // THUMB ROW - keys 30 to 36
                 &kp ESC &kp SPACE &kp TAB
-                &kp RET &kp BSPC  &kp DEL
+                &lt 2 RET &lt 1 BSPC &kp DEL
 			>;
 		};	
 	};

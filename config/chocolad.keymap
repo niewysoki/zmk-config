@@ -1,11 +1,6 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include "common/homerow_mods.dtsi"
-#include "chocolad/layers/base.dtsi"
-#include "chocolad/layers/numbers.dtsi"
+#include "chocolad/layers/0_base.dtsi"
+#include "chocolad/layers/1_numbers.dtsi"
+#include "chocolad/layers/2_symbols.dtsi"
