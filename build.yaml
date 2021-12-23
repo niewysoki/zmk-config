@@ -1,8 +1,8 @@
 ---
 include:
   - board: bluemicro840_v1
-    shield: kyria_left
-    shield: kyria_right
+    - shield: kyria_left
+    - shield: kyria_right
   - board: nice_nano
-    shield: chocolad_left
-    shield: chocolad_right
+    - shield: chocolad_left
+    - shield: chocolad_right
