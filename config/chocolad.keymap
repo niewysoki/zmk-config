@@ -6,4 +6,5 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include "common/homerow_mods.dtsi"
 #include "chocolad/layers/base.dtsi"
