@@ -9,16 +9,16 @@
                 &kp J &kp L &kp U &kp Y &kp SQT 
 
             // MIDDLE ROW - keys 10 to 19
-                &hm LGUI A &hm LALT R &hm LCTL S &hm LSHFT T &kp G
-                &kp M &hm LSHFT N &hm LCTL E &hm LALT I &hm LGUI O 
+                &hm LGUI A &hm LALT R  &hm LCTL S &hm LSHFT T &kp G
+                &kp M      &hm LSHFT N &hm LCTL E &hm LALT I  &hm LGUI O 
 
             // BOTTOM ROW - keys 20 to 29
-                &kp Z &hm RALT X &kp C &kp D &kp V
-                &kp K &kp H &kp COMMA &hm RALT DOT &kp FSLH 
+                &kp Z &hm RALT X &kp C     &kp D        &kp V
+                &kp K &kp H      &kp COMMA &hm RALT DOT &kp FSLH 
 
             // THUMB ROW - keys 30 to 36
                 &kp ESC &kp SPACE &kp TAB
-                &kp RET &kp BSPC &kp DEL
+                &kp RET &kp BSPC  &kp DEL
 			>;
 		};	
 	};
