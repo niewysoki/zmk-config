@@ -6,10 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include "common/homerow.dtsi"
+#include "common/homerow_mods.dtsi"
 #include "kyria/combos.dtsi"
 #include "kyria/layers/base.dtsi"
-
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BACKSPACE>;
-};
