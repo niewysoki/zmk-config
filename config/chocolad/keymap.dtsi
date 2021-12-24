@@ -4,9 +4,9 @@
 
 // #include "polish_alphabet_combos.dtsi"
 
-/include/ "layers/0.dtsi"
+#include "layers/0.dts"
 
-/include/ "layers/1.dtsi"
+#include "layers/1.dts"
 
 // #include "layers/2.dtsi"
 
