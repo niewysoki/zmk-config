@@ -1,7 +1,7 @@
 / {
 	keymap {
-		BLE_LAYER {
-			label = "Bluetooth";
+		MED_LAYER {
+			label = "Media";
 			bindings = <
             // TOP ROW - keys 0 to 9
                 &none       &none       &none       &none       &bootloader

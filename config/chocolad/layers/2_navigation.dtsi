@@ -1,6 +1,6 @@
 / {
 	keymap {
-		BLE_LAYER {
+		NAV_LAYER {
 			label = "Navigation";
 			bindings = <
             // TOP ROW - keys 0 to 9
