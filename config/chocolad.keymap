@@ -5,4 +5,4 @@
 
 #include "chocolad/layers/0_colemak.dtsi"
 
-#include "chooclad/layers/1_bluetooth.dtsi"
+#include "chocolad/layers/1_bluetooth.dtsi"

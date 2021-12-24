@@ -1,6 +1,7 @@
+
 / {
 	keymap {
-		BASE_LAYER {
+		QWE_LAYER {
 			label = "Base - QWERTY";
 			bindings = <
             // TOP ROW - keys 0 to 9
