@@ -1,12 +1,12 @@
-#include "../common/homerow_mods.dtsi"
+/include/ "../common/homerow_mods.dtsi"
 
 // #include "combos.dtsi"
 
 // #include "polish_alphabet_combos.dtsi"
 
-#include "layers/0.dtsi"
+/include/ "layers/0.dtsi"
 
-// #include "layers/1.dtsi"
+/include/ "layers/1.dtsi"
 
 // #include "layers/2.dtsi"
 
