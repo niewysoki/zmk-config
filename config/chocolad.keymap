@@ -2,10 +2,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include "common/homerow_mods.dtsi"
 #include "chocolad/layers/0_colemak.dtsi"
-#include "chocolad/layers/0_base.dtsi"
 #include "chocolad/layers/1_bluetooth.dtsi"
-#include "chocolad/layers/0_navigation.dtsi"
-#include "chocolad/layers/0_media.dtsi"
+#include "chocolad/layers/2_navigation.dtsi"
+#include "chocolad/layers/3_media.dtsi"
 #include "chocolad/layers/4_symbols.dtsi"
 #include "chocolad/layers/5_numbers.dtsi"
 #include "chocolad/layers/6_functions.dtsi"
+#include "chocolad/layers/7_qwerty.dtsi"
+
