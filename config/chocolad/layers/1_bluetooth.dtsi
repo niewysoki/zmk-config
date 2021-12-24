@@ -11,11 +11,9 @@
                 &kp LGUI     &kp LALT     &kp LCTL     &kp LSHFT    &none     
                 &kp BT_SEL 0 &kp BT_SEL 1 &kp BT_SEL 2 &kp BT_SEL 3 &kp BT_SEL 4 
 
-
             // BOTTOM ROW - keys 20 to 29
                 &none       &kp RALT    &none       &none       &none 
                 &none       &none       &none       &none       &none
-
 
             // THUMB ROW - keys 30 to 36
                 &kp RET     &kp BSPC    &kp DEL
