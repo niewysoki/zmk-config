@@ -4,7 +4,7 @@
 #include "common/homerow_mods.dtsi"
 
 #include "chocolad/combos.dtsi"
-#include "config\chocolad\polish_alphabet_combos.dtsi"
+#include "chocolad/polish_alphabet_combos.dtsi"
 
 #include "chocolad/layers/0_colemak.dtsi"
 #include "chocolad/layers/1_bluetooth.dtsi"
