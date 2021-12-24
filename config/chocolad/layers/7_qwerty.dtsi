@@ -1,6 +1,5 @@
 / {
 	keymap {
-        compatible = "zmk,keymap";
 		BASE_LAYER {
 			label = "Base - QWERTY";
 			bindings = <
