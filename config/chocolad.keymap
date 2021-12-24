@@ -3,4 +3,5 @@
 
 #include "common/homerow_mods.dtsi"
 
-#include "chocolad/layers/7_qwerty.dtsi"
+#include "chocolad/layers/0_colemak.dtsi"
+
