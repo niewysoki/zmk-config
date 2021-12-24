@@ -1,8 +1,4 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#include "common/homerow_mods.dtsi"
-
-#include "chocolad/layers/0_colemak.dtsi"
-
-#include "chocolad/layers/1_bluetooth.dtsi"
+#include "chocolad/keymap.dtsi"

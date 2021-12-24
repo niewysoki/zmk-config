@@ -1,0 +1,5 @@
+#include "../common/homerow_mods.dtsi"
+
+#include "chocolad/keymap.dtsi"
+
+#include "chocolad/layers/1_bluetooth.dtsi"
