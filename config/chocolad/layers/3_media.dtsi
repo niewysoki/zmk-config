@@ -1,0 +1,26 @@
+/ {
+	keymap {
+		BLE_LAYER {
+			label = "Bluetooth";
+			bindings = <
+            // TOP ROW - keys 0 to 9
+                &none       &none       &none       &none       &bootloader
+                &none       &none       &none       &none       &none 
+
+            // MIDDLE ROW - keys 10 to 19
+                &kp LGUI     &kp LALT   &kp LCTL    &kp LSHFT    &none     
+                &out OUT_TOG &kp C_PREV &kp C_VOL_D &kp C_VOL_UP &kp C_NEXT
+
+
+            // BOTTOM ROW - keys 20 to 29
+                &none       &kp RALT    &none       &none      &none 
+                &none       &kp C_STOP  &kp C_PP    &kp C_MUTE &none
+
+
+            // THUMB ROW - keys 30 to 36
+                &kp RET     &kp BSPC    &kp DEL
+                &none       &none       &none
+			>;
+		};	
+	};
+};
