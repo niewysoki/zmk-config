@@ -15,7 +15,6 @@
                 &kp F10     &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK
                 &none       &none       &none       &kp RALT    &none 
 
-
             // THUMB ROW - keys 30 to 36
                 &kp K_APP   &kp SPC     &kp TAB
                 &none       &none       &none

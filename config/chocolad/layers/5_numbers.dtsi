@@ -4,20 +4,20 @@
 			label = "Numbers";
 			bindings = <
             // TOP ROW - keys 0 to 9
-                &kp LBKT &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RBKT
-                &none    &none     &none     &none     &bootloader 
+                &kp LBKT    &kp NUM_7   &kp NUM_8   &kp NUM_9   &kp RBKT
+                &none       &none       &none       &none       &bootloader 
 
             // MIDDLE ROW - keys 10 to 19
-                &kp SEMI &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp EQUAL
-                &none    &kp LSHFT &kp LCTL  &kp LALT  &kp LGUI
+                &kp SEMI    &kp NUM_4   &kp NUM_5   &kp NUM_6   &kp EQUAL
+                &none       &kp LSHFT   &kp LCTL    &kp LALT    &kp LGUI
 
             // BOTTOM ROW - keys 20 to 29
-                &kp GRAVE &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp BSLH
-                &none     &none     &none     &kp RALT  &none 
+                &kp GRAVE   &kp NUM_1   &kp NUM_2   &kp NUM_3   &kp BSLH
+                &none       &none       &none       &kp RALT    &none 
 
             // THUMB ROW - keys 30 to 36
-                &kp DOT &kp NUM_0 &kp MINUS
-                &none   &none     &none
+                &kp DOT     &kp NUM_0   &kp MINUS
+                &none       &none       &none
 			>;
 		};	
 	};

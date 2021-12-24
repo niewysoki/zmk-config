@@ -2,7 +2,7 @@
 	keymap {
         compatible = "zmk,keymap";
 		BASE_LAYER {
-			label = "Base";
+			label = "Base - Colemak";
 			bindings = <
             // TOP ROW - keys 0 to 9
                 &kp Q       &kp W       &kp F       &kp P       &kp B

@@ -5,16 +5,16 @@
 			bindings = <
             // TOP ROW - keys 0 to 9
                 &none       &none       &none       &none       &bootloader
-                &none       &none       &none       &none       &kp BT_CLR 
+                &none       &none       &none       &none       &none 
 
             // MIDDLE ROW - keys 10 to 19
-                &kp LGUI     &kp LALT     &kp LCTL     &kp LSHFT    &none     
-                &kp BT_SEL 0 &kp BT_SEL 1 &kp BT_SEL 2 &kp BT_SEL 3 &kp BT_SEL 4 
+                &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &none     
+                &kp CPAS    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
 
 
             // BOTTOM ROW - keys 20 to 29
                 &none       &kp RALT    &none       &none       &none 
-                &none       &none       &none       &none       &none
+                &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END
 
 
             // THUMB ROW - keys 30 to 36
