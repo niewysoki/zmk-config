@@ -1,4 +1,4 @@
-/include/ "../common/homerow_mods.dtsi"
+#include "../common/homerow_mods.dtsi"
 
 // #include "combos.dtsi"
 
