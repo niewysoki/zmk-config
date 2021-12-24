@@ -1,9 +1,22 @@
 #include "../common/homerow_mods.dtsi"
 
-#include "combos.dtsi"
+// #include "combos.dtsi"
 
-#include "polish_alphabet_combos.dtsi"
+// #include "polish_alphabet_combos.dtsi"
 
-#include "layers/0_colemak.dtsi"
+#include "layers/0.dtsi"
 
-#include "layers/1_bluetooth.dtsi"
+// #include "layers/1.dtsi"
+
+// #include "layers/2.dtsi"
+
+// #include "layers/3.dtsi"
+
+// #include "layers/4.dtsi"
+
+// #include "layers/5.dtsi"
+
+// #include "layers/6.dtsi"
+
+// #include "layers/7.dtsi"
+
