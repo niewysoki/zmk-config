@@ -14,11 +14,7 @@
 			bindings = <&to 0>;
 			layers = <7>;
 		};
-	};
-};
 
-/ {
-	combos {
 		combo_a {
 			timeout-ms = <50>;
 			key-positions = <10 11>;
