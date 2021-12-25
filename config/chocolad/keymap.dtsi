@@ -30,7 +30,7 @@
                                         &kp RET     &kp BSPC    &kp DEL     &none       &none       &none
 			>;
 		};
-
+/*
         media_layer {
 			label = "MED";
 			bindings = <
@@ -80,6 +80,6 @@
                                         &kp ESC     &kp SPACE   &kp TAB     &kp RET     &kp BSPC    &kp DEL
 			>;
 		};
-  
+*/
 	};
 };
