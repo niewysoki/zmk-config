@@ -23,8 +23,8 @@
         bluetooth_layer {
 			label = "BLE";
 			bindings = <
-                &none       &none       &none       &none       &bootloader &none       &none       &none       &none       &kp BT_CLR 
-                &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &none       &kp BT_SEL 0 &kp BT_SEL 1 &kp BT_SEL 2 &kp BT_SEL 3 &kp BT_SEL 4 
+                &none       &none       &none       &none       &bootloader &none       &none       &none       &none       &bt BT_CLR 
+                &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 
                 &none       &kp RALT    &none       &none       &none       &none       &none       &none       &none       &none
                                         &kp RET     &kp BSPC    &kp DEL     &none       &none       &none
 			>;
@@ -33,7 +33,7 @@
         navigation_layer {
 			label = "NAV";
 			bindings = <
-                &none       &none       &none       &none       &bootloader &none       &none       &none       &none       &kp BT_CLR 
+                &none       &none       &none       &none       &bootloader &none       &none       &none       &none       &none 
                 &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &none       &kp CPAS    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
                 &none       &kp RALT    &none       &none       &none       &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END
                                         &kp RET     &kp BSPC    &kp DEL     &none       &none       &none
@@ -43,7 +43,7 @@
         media_layer {
 			label = "MED";
 			bindings = <
-                &none       &none       &none       &none       &bootloader &none       &none       &none       &none       &kp BT_CLR 
+                &none       &none       &none       &none       &bootloader &none       &none       &none       &none       &none 
                 &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &none       &out OUT_TOG &kp C_PREV &kp C_VOL_D &kp C_VOL_UP &kp C_NEXT
                 &none       &kp RALT    &none       &none       &none       &none       &kp C_STOP  &kp C_PP    &kp C_MUTE  &none
                                                     &kp RET     &kp BSPC    &kp DEL     &none       &none       &none
