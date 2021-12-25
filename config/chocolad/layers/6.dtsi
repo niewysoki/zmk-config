@@ -3,21 +3,10 @@
 		FUN_LAYER {
 			label = "Functions";
 			bindings = <
-            // TOP ROW - keys 0 to 9
-                &kp F12     &kp F7      &kp F8      &kp F9      &kp PSCRN
-                &none       &none       &none       &none       &bootloader 
-
-            // MIDDLE ROW - keys 10 to 19
-                &kp F11     &kp F4      &kp F5      &kp F6      &kp SLCK
-                &none       &kp LSHFT   &kp LCTL    &kp LALT    &kp LGUI
-
-            // BOTTOM ROW - keys 20 to 29
-                &kp F10     &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK
-                &none       &none       &none       &kp RALT    &none 
-
-            // THUMB ROW - keys 30 to 36
-                &kp K_APP   &kp SPC     &kp TAB
-                &none       &none       &none
+                &kp F12     &kp F7      &kp F8      &kp F9      &kp PSCRN   &none       &none       &none       &none       &bootloader 
+                &kp F11     &kp F4      &kp F5      &kp F6      &kp SLCK    &none       &kp LSHFT   &kp LCTL    &kp LALT    &kp LGUI
+                &kp F10     &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK &none       &none       &none       &kp RALT    &none 
+                                        &kp K_APP   &kp SPC     &kp TAB     &none       &none       &none
 			>;
 		};	
 	};

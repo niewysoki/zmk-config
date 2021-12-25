@@ -3,22 +3,12 @@
 		SYM_LAYER {
 			label = "Symbols";
 			bindings = <
-            // TOP ROW - keys 0 to 9
-                &kp LBRC    &kp AMPS    &kp ASTRK   &kp LPAR    &kp RBRC
-                &none       &none       &none       &none       &bootloader
-
-            // MIDDLE ROW - keys 10 to 19
-                &kp COLON   &kp DLLR    &kp PRCT    &kp CRRT    &kp PLUS
-                &none       &kp LSHFT   &kp LCTL    &kp LALT    &kp LGUI
-
-            // BOTTOM ROW - keys 20 to 29
-                &kp TILDE   &kp EXCL    &kp AT      &kp HASH    &kp PIPE
-                &none       &none       &none       &kp RALT    &none 
-
-            // THUMB ROW - keys 30 to 36
-                &kp LPAR    &kp RPAR    &kp UNDER
-                &none       &none       &none
+                &kp LBRC    &kp AMPS    &kp ASTRK   &kp LPAR    &kp RBRC    &none       &none       &none       &none       &bootloader
+                &kp COLON   &kp DLLR    &kp PRCT    &kp CRRT    &kp PLUS    &none       &kp LSHFT   &kp LCTL    &kp LALT    &kp LGUI
+                &kp TILDE   &kp EXCL    &kp AT      &kp HASH    &kp PIPE    &none       &none       &none       &kp RALT    &none 
+                                        &kp LPAR    &kp RPAR    &kp UNDER   &none       &none       &none
 			>;
 		};	
 	};
 };
+

@@ -4,21 +4,10 @@
 		QWE_LAYER {
 			label = "Base - QWERTY";
 			bindings = <
-            // TOP ROW - keys 0 to 9
-                &kp Q       &kp W       &kp E       &kp R       &kp T
-                &kp Y       &kp U       &kp I       &kp O       &kp P 
-
-            // MIDDLE ROW - keys 10 to 19
-                &kp A       &kp S       &kp D       &kp F       &kp G
-                &kp H       &kp J       &kp K       &kp L       &kp SQT 
-
-            // BOTTOM ROW - keys 20 to 29
-                &kp Z       &kp X       &kp C       &kp V       &kp B
-                &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH 
-
-            // THUMB ROW - keys 30 to 36
-                &kp ESC     &kp SPACE   &kp TAB
-                &kp RET     &kp BSPC    &kp DEL
+                &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P 
+                &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SQT 
+                &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH 
+                                        &kp ESC     &kp SPACE   &kp TAB     &kp RET     &kp BSPC    &kp DEL
 			>;
 		};	
 	};

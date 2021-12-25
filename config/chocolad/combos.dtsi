@@ -16,3 +16,70 @@
 		};
 	};
 };
+
+/ {
+	combos {
+		combo_a {
+			timeout-ms = <50>;
+			key-positions = <10 11>;
+			bindings = <&kp RA(A)>;
+			layers = <0>;
+		};
+
+		combo_c {
+			timeout-ms = <50>;
+			key-positions = <22 23>;
+			bindings = <&kp RA(C)>;
+			layers = <0>;
+		};
+
+		combo_e {
+			timeout-ms = <50>;
+			key-positions = <17 18>;
+			bindings = <&kp RA(E)>;
+			layers = <0>;
+		};
+
+		combo_l {
+			timeout-ms = <50>;
+			key-positions = <7 8>;
+			bindings = <&kp RA(L)>;
+			layers = <0>;
+		};
+
+		combo_n {
+			timeout-ms = <50>;
+			key-positions = <16 17>;
+			bindings = <&kp RA(N)>;
+			layers = <0>;
+		};
+
+		combo_o {
+			timeout-ms = <50>;
+			key-positions = <18 19>;
+			bindings = <&kp RA(O)>;
+			layers = <0>;
+		};
+
+		combo_s {
+			timeout-ms = <50>;
+			key-positions = <12 13>;
+			bindings = <&kp RA(S)>;
+			layers = <0>;
+		};
+
+		combo_z1 {
+			timeout-ms = <50>;
+			key-positions = <20 21>;
+			bindings = <&kp RA(Z)>;
+			layers = <0>;
+		};
+
+		combo_z2 {
+			timeout-ms = <50>;
+			key-positions = <21 22>;
+			bindings = <&kp RA(X)>;
+			layers = <0>;
+		};
+	};
+};

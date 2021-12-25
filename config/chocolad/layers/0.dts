@@ -5,21 +5,10 @@
 		BASE_LAYER {
 			label = "Base - Colemak";
 			bindings = <
-            // TOP ROW - keys 0 to 9
-                &kp Q       &kp W       &kp F       &kp P       &kp B
-                &kp J       &kp L       &kp U       &kp Y       &kp SQT 
-
-            // MIDDLE ROW - keys 10 to 19
-                &hm LGUI A  &hm LALT R  &hm LCTL S  &hm LSHFT T &kp G
-                &kp M       &hm LSHFT N &hm LCTL E  &hm LALT I  &hm LGUI O 
-
-            // BOTTOM ROW - keys 20 to 29
-                &kp Z       &hm RALT X  &kp C       &kp D       &kp V
-                &kp K       &kp H       &kp COMMA   &hm RALT DOT &kp FSLH 
-
-            // THUMB ROW - keys 30 to 36
-                &lt 1 ESC   &lt 2 SPACE &lt 3 TAB
-                &lt 4 RET   &lt 5 BSPC  &lt 6 DEL
+                &kp Q       &kp W       &kp F       &kp P       &kp B       &kp J       &kp L       &kp U       &kp Y       &kp SQT 
+                &hm LGUI A  &hm LALT R  &hm LCTL S  &hm LSHFT T &kp G       &kp M       &hm LSHFT N &hm LCTL E  &hm LALT I  &hm LGUI O 
+                &kp Z       &hm RALT X  &kp C       &kp D       &kp V       &kp K       &kp H       &kp COMMA   &hm RALT DOT &kp FSLH 
+                                        &lt 1 ESC   &lt 2 SPACE &lt 3 TAB   &lt 4 RET   &lt 5 BSPC  &lt 6 DEL
 			>;
 		};	
 	};
