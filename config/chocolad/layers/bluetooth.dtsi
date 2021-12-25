@@ -1,0 +1,15 @@
+/ {
+	keymap {
+        compatible = "zmk,keymap";
+
+        bluetooth_layer {
+			label = "BLE";
+			bindings = <
+                &none       &none       &none       &none       &bootloader &bt BT_CLR   &out OUT_TOG &none     &none       &none
+                &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 
+                &none       &kp RALT    &none       &none       &none       &none       &none       &none       &none       &none
+                                        &none       &none       &none       &kp RET     &kp BSPC    &kp DEL     
+			>;
+		};
+	};
+};

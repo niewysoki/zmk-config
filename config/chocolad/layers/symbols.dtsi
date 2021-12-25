@@ -1,14 +1,15 @@
 / {
 	keymap {
-		SYM_LAYER {
-			label = "Symbols";
+        compatible = "zmk,keymap";
+		
+        symbols_layer {
+			label = "SYM";
 			bindings = <
                 &kp LBRC    &kp AMPS    &kp ASTRK   &kp LPAR    &kp RBRC    &none       &none       &none       &none       &bootloader
-                &kp COLON   &kp DLLR    &kp PRCT    &kp CRRT    &kp PLUS    &none       &kp LSHFT   &kp LCTL    &kp LALT    &kp LGUI
+                &kp COLON   &kp DLLR    &kp PRCNT   &kp CARET   &kp PLUS    &none       &kp LSHFT   &kp LCTL    &kp LALT    &kp LGUI
                 &kp TILDE   &kp EXCL    &kp AT      &kp HASH    &kp PIPE    &none       &none       &none       &kp RALT    &none 
                                         &kp LPAR    &kp RPAR    &kp UNDER   &none       &none       &none
 			>;
 		};	
 	};
 };
-

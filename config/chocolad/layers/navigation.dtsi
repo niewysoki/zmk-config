@@ -1,0 +1,15 @@
+/ {
+	keymap {
+        compatible = "zmk,keymap";
+
+		navigation_layer {
+			label = "NAV";
+			bindings = <
+                &none       &none       &none       &none       &bootloader &none       &none       &none       &none       &none 
+                &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &none       &kp CAPS    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
+                &none       &kp RALT    &none       &none       &none       &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END
+                                        &none       &none       &none       &kp RET     &kp BSPC    &kp DEL     
+			>;
+		};
+	};
+};

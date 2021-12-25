@@ -1,0 +1,8 @@
+#include "colemak.dtsi"
+#include "bluetooth.dtsi"
+#include "navigation.dtsi"
+#include "media.dtsi"
+#include "symbols.dtsi"
+#include "numbers.dtsi"
+#include "functions.dtsi"
+#include "qwerty.dtsi"
