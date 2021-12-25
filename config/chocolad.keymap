@@ -3,6 +3,7 @@
 
 #include "chocolad/behaviors.dtsi"
 
+#include "chocolad/combos.dtsi"
 
 #include "chocolad/keymap.dtsi"
 
