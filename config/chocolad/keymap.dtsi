@@ -20,7 +20,7 @@
                                         &kp RET     &kp BSPC    &kp DEL     &none       &none       &none
 			>;
 		};
-        
+ /*       
         navigation_layer {
 			label = "NAV";
 			bindings = <
@@ -30,7 +30,7 @@
                                         &kp RET     &kp BSPC    &kp DEL     &none       &none       &none
 			>;
 		};
-/*
+
         media_layer {
 			label = "MED";
 			bindings = <
