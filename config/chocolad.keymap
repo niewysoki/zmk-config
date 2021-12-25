@@ -1,9 +1,5 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#include "chocolad/behaviors.dtsi"
-
-#include "chocolad/combos.dtsi" 
-
-#include "chocolad/keymap.dtsi"
+#include "chocolad/main.keymap"
 
