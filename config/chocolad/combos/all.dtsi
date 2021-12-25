@@ -10,3 +10,4 @@
 
 #include "polish_letters.dtsi"
 #include "qwerty_switch.dtsi"
+#include "brackets.dtsi"
