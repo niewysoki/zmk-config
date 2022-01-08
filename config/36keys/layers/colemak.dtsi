@@ -6,8 +6,8 @@
 			label = "DEF";
 			bindings = <
                 &kp Q       &kp W       &kp F       &kp P       &kp B       &kp J       &kp L       &kp U       &kp Y       &kp SQT 
-                &hm LGUI A  &hm LALT R  &hm LCTL S  &hm LSHFT T &kp G       &kp M       &hm LSHFT N &hm LCTL E  &hm LALT I  &hm LGUI O 
-                &kp Z       &hm RALT X  &kp C       &kp D       &kp V       &kp K       &kp H       &kp COMMA   &hm RALT DOT &kp FSLH 
+                &lhm LGUI A &lhm LALT R &lhm LCTL S &lhm LSHFT T &kp G      &kp M      &rhm LSHFT N &rhm LCTL E &rhm LALT I &rhm LGUI O 
+                &kp Z       &lhm RALT X &kp C       &kp D       &kp V       &kp K       &kp H       &kp COMMA   &rhm RALT DOT &kp FSLH 
                                         &lt 1 ESC   &lt 2 SPACE &lt 3 TAB   &lt 4 RET   &lt 5 BSPC  &lt 6 DEL
 			>;
 		};
