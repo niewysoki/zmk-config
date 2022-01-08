@@ -5,9 +5,9 @@
 		media_layer {
 			label = "MED";
 			bindings = <
-                &none       &none       &none       &none       &bootloader &none       &none       &none       &none       &none 
-                &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &none       &none       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
-                &none       &kp RALT    &none       &none       &none       &none       &kp C_STOP  &kp C_PP    &kp C_MUTE  &none
+                &kp LC(F)   &kp LC(Z)   &kp LC(A)   &kp LC(X)   &kp LC(Y)   &none       &none       &none       &none       &none 
+                &kp LGUI    &kp LALT    &kp LCTL    &kp LSHFT   &kp LC(G)   &none       &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
+                &kp LA(TAB) &kp RALT    &kp LC(C)   &kp LC(V) 	&bootloader &none       &kp C_STOP  &kp C_PP    &kp C_MUTE  &none
                                         &none       &none       &none       &kp RET     &kp BSPC    &kp DEL     
 			>;
 		};	
