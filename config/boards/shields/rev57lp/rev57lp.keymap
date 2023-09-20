@@ -42,7 +42,7 @@
             bindings = <
                 &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
                 &none       &kp Q       &kp W       &kp F       &kp P       &kp B                             &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &none    
-                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &tdcaps           &kp M       &hm LSHFT N &hm LCTRL E &kp LALT I &kp O       &none    
+                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &tdcaps           &kp M       &hm LSHFT N &hm LCTRL E &hm LALT I &kp O       &none    
                 &kp LGUI    &kp Z       &kp X       &kp C       &kp D       &kp V                             &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp LGUI
                                                     &none       &kp SPACE   &kp TAB     &none     &none       &kp ENTER   &kp BSPC    &none
                 >;
@@ -50,9 +50,9 @@
 
         numpad {
             bindings = <
-                &kp ESC     &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
+                &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
                 &none       &kp Q       &kp W       &kp F       &kp P       &kp B                             &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &none    
-                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &none             &kp M       &hm LSHFT N &hm LCTRL E &kp LALT I &kp O       &none    
+                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &tdcaps           &kp M       &hm LSHFT N &hm LCTRL E &hm LALT I &kp O       &none    
                 &kp LGUI    &kp Z       &kp X       &kp C       &kp D       &kp V                             &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp LGUI
                                                     &none       &kp SPACE   &kp TAB     &none     &none       &kp ENTER   &kp BSPC    &none
                 >;
@@ -60,9 +60,9 @@
 
         shifted {
             bindings = <
-                &kp ESC     &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
+                &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
                 &none       &kp Q       &kp W       &kp F       &kp P       &kp B                             &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &none    
-                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &none             &kp M       &hm LSHFT N &hm LCTRL E &kp LALT I &kp O       &none    
+                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &tdcaps           &kp M       &hm LSHFT N &hm LCTRL E &hm LALT I &kp O       &none    
                 &kp LGUI    &kp Z       &kp X       &kp C       &kp D       &kp V                             &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp LGUI
                                                     &none       &kp SPACE   &kp TAB     &none     &none       &kp ENTER   &kp BSPC    &none
                 >;
@@ -71,9 +71,9 @@
 
         fn_nav {
             bindings = <
-                &kp ESC     &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
+                &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
                 &none       &kp Q       &kp W       &kp F       &kp P       &kp B                             &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &none    
-                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &none             &kp M       &hm LSHFT N &hm LCTRL E &kp LALT I &kp O       &none    
+                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &tdcaps           &kp M       &hm LSHFT N &hm LCTRL E &hm LALT I &kp O       &none    
                 &kp LGUI    &kp Z       &kp X       &kp C       &kp D       &kp V                             &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp LGUI
                                                     &none       &kp SPACE   &kp TAB     &none     &none       &kp ENTER   &kp BSPC    &none
                 >;
@@ -81,9 +81,9 @@
 
         bluetooth {
             bindings = <
-                &kp ESC     &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
+                &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
                 &none       &kp Q       &kp W       &kp F       &kp P       &kp B                             &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &none    
-                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &none             &kp M       &hm LSHFT N &hm LCTRL E &kp LALT I &kp O       &none    
+                &none       &kp A       &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &tdcaps           &kp M       &hm LSHFT N &hm LCTRL E &hm LALT I &kp O       &none    
                 &kp LGUI    &kp Z       &kp X       &kp C       &kp D       &kp V                             &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp LGUI
                                                     &none       &kp SPACE   &kp TAB     &none     &none       &kp ENTER   &kp BSPC    &none
                 >;
@@ -93,9 +93,9 @@
             bindings = <
                 &kp ESC     &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
                 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                             &kp Y       &kp U       &kp I       &kp O      &kp P       &kp PG_UP    
-                &kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G           &none             &kp H       &kp J       &kp K       &kp L      &kp SEMI    &kp PG_DN
+                &kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G           &tdcaps           &kp H       &kp J       &kp K       &kp L      &kp SEMI    &kp PG_DN
                 &kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B                             &kp N       &kp M       &kp COMMA   &kp DOT    &kp SLASH   &kp LGUI
-                                                    &kp CAPS    &kp LALT    &kp SPACE   &none     &none       &kp ENTER   &kp BSPC    &none
+                                                    &kp CAPS    &kp LALT    &kp SPACE   &kp TAB   &kp ENTER   &kp BSPC    &kp GRAVE   &kp LA(F4)
                 >;
         };
     };
