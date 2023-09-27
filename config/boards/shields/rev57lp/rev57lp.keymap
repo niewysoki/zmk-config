@@ -119,19 +119,19 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
         combo_rpar {
             timeout-ms = <50>;
             key-positions = <19 32>;
-            bindings = <&kp LPAR>;
+            bindings = <&kp RPAR>;
         };
 
         combo_rbkt {
             timeout-ms = <50>;
             key-positions = <20 33>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp RBKT>;
         };
 
         combo_rbrc {
             timeout-ms = <50>;
             key-positions = <18 31>;
-            bindings = <&kp LBRC>;
+            bindings = <&kp RBRC>;
         };
     };
 
