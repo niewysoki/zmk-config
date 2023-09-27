@@ -43,8 +43,15 @@
 #define BLUETOOTH_LAYER 3
 #define QWERTY_LAYER    4
 
-MT_MACRO(hm_n, n_homerow_mod, "N_HOMEROW_MOD", N, LSHFT)
+MT_MACRO(hm_n, n_homerow_mod, N_HOMEROW_MOD, N, RSHFT)
+MT_MACRO(hm_e, e_homerow_mod, E_HOMEROW_MOD, E, RCTRL)
+MT_MACRO(hm_i, i_homerow_mod, I_HOMEROW_MOD, I, RALT)
+MT_MACRO(hm_o, o_homerow_mod, O_HOMEROW_MOD, O, RGUI)
 
+MT_MACRO(hm_t, t_homerow_mod, T_HOMEROW_MOD, N, LSHFT)
+MT_MACRO(hm_s, s_homerow_mod, S_HOMEROW_MOD, E, LCTRL)
+MT_MACRO(hm_r, r_homerow_mod, R_HOMEROW_MOD, I, LALT)
+MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
 
 / {
     behaviors {
@@ -71,8 +78,7 @@ MT_MACRO(hm_n, n_homerow_mod, "N_HOMEROW_MOD", N, LSHFT)
     // TODO:
     // - turn TAB and ENTER into layer keys
     // - turn ESC and DELETE into layer keys
-    // - make tap dance activation for layer and homerow mods
-    // - four layers + qwerty and bluetooth (combo activations)
+    // - create four layers + qwerty and bluetooth (combo activations)
     // - four layers v1:
     //   - left numpad
     //   - right numpad
@@ -91,7 +97,7 @@ MT_MACRO(hm_n, n_homerow_mod, "N_HOMEROW_MOD", N, LSHFT)
             bindings = <
                 &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                            &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp BSLH    
                 &none       &kp Q       &kp W       &kp F       &kp P       &kp B                             &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &none    
-                &none       &hm LGUI A  &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &tdcaps           &kp M       &hm_n       &hm LCTRL E &hm LALT I &hm LGUI O  &none    
+                &none       &hm_a       &hm_r       &hm_s       &hm_t       &kp G           &tdcaps           &kp M       &hm_n       &hm_e       &hm_i      &hm_o       &none    
                 &none       &kp Z       &kp X       &kp C       &kp D       &kp V                             &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &none
                                                     &kp ESC     &kp SPACE   &kp TAB     &none     &none       &kp ENTER   &kp BSPC    &kp DELETE
                 >;
