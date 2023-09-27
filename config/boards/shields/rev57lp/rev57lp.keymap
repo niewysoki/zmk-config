@@ -35,6 +35,13 @@
     }; \
 };
 
+#define TWO_KEYS_COMBO_ONE_KEYPRESS(NAME, POS1, POS2, KEY) \
+        NAME { \
+            timeout-ms = <50>; \
+            key-positions = <POS1 POS2>; \
+            bindings = <&kp KEY>; \
+        };
+
 
 // TODO:
 // - turn TAB and ENTER into layer keys
@@ -98,40 +105,25 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
 
     combos {
         compatible = "zmk,combos";
-        combo_lpar {
+        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_lpar, 16, 28, LPAR)
+        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_lbkt, 15, 27, LBKT)
+        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_lbrc, 17, 29, LBRC)
+        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_rpar, 19, 32, RPAR)
+        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_rbkt, 20, 33, RBKT)
+        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_rbrc, 18, 31, RBRC)
+
+        combo_base_to_qwerty {
             timeout-ms = <50>;
-            key-positions = <16 28>;
-            bindings = <&kp LPAR>;
+            key-positions = <4 5 6 7>;
+            layers = <BASE_LAYER>;
+            bindings = <&to QWERTY_LAYER>;
         };
 
-        combo_lbkt {
+        combo_qwerty_to_base {
             timeout-ms = <50>;
-            key-positions = <15 27>;
-            bindings = <&kp LBKT>;
-        };
-
-        combo_lbrc {
-            timeout-ms = <50>;
-            key-positions = <17 29>;
-            bindings = <&kp LBRC>;
-        };
-
-        combo_rpar {
-            timeout-ms = <50>;
-            key-positions = <19 32>;
-            bindings = <&kp RPAR>;
-        };
-
-        combo_rbkt {
-            timeout-ms = <50>;
-            key-positions = <20 33>;
-            bindings = <&kp RBKT>;
-        };
-
-        combo_rbrc {
-            timeout-ms = <50>;
-            key-positions = <18 31>;
-            bindings = <&kp RBRC>;
+            key-positions = <4 5 6 7>;
+            layers = <QWERTY_LAYER>;
+            bindings = <&to BASE_LAYER>;
         };
     };
 
@@ -145,6 +137,46 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
                 &none       &hm_a       &hm_r       &hm_s       &hm_t       &kp G             &tdcaps           &kp M       &hm_n       &hm_e       &hm_i      &hm_o       &none    
                 &kp RALT    &kp Z       &kp X       &kp C       &kp D       &kp V                               &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp RALT
                                                     &none       &kp ESC     &kp SPACE   &kp TAB     &kp ENTER   &kp BSPC    &kp DELETE  &none
+                >;
+        };
+
+        layer_1 {
+            bindings = <
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
+                                                    &none      &none       &none        &none       &none       &none       &none       &none
+                >;
+        };
+
+        layer_2 {
+            bindings = <
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
+                                                    &none      &none       &none        &none       &none       &none       &none       &none
+                >;
+        };
+
+        layer_3 {
+            bindings = <
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
+                                                    &none      &none       &none        &none       &none       &none       &none       &none
+                >;
+        };
+
+        layer_4 {
+            bindings = <
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
+                                                    &none      &none       &none        &none       &none       &none       &none       &none
                 >;
         };
 
