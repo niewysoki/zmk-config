@@ -118,7 +118,7 @@ LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENT
         combo_toggle_qwerty {
             timeout-ms = <50>;
             key-positions = <4 5 6 7>;
-            layers = <BASE, QWERTY>;
+            layers = <BASE QWERTY>;
             bindings = <&tog QWERTY>;
         };
 
@@ -131,7 +131,7 @@ LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENT
         combo_toggle_bluetooth {
             timeout-ms = <50>;
             key-positions = <48 56>;
-            layers = <BASE, BLUETOOTH>;
+            layers = <BASE BLUETOOTH>;
             bindings = <&tog BLUETOOTH>;
         }
 
