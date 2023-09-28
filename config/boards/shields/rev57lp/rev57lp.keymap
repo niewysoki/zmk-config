@@ -64,23 +64,26 @@
 //   - media
 
 
-#define BASE_LAYER      0
-#define LAYER_1         1
-#define LAYER_2         2
-#define LAYER_3         3
-#define LAYER_4         4
-#define MEDIA_LAYER     5
-#define QWERTY_LAYER    6
+#define BASE       0
+#define NUMPAD     1
+#define NAVIGATION 2
+#define BLUETOOTH  3
+#define QWERTY     4
 
-MT_MACRO(hm_n, n_homerow_mod, N_HOMEROW_MOD, N, RSHFT)
-MT_MACRO(hm_e, e_homerow_mod, E_HOMEROW_MOD, E, RCTRL)
-MT_MACRO(hm_i, i_homerow_mod, I_HOMEROW_MOD, I, RALT)
-MT_MACRO(hm_o, o_homerow_mod, O_HOMEROW_MOD, O, RGUI)
+MT_MACRO(hm_m, m_homerow_mod, M_HOMEROW_MOD, M, RALT)
+MT_MACRO(hm_n, n_homerow_mod, N_HOMEROW_MOD, N, LSHFT)
+MT_MACRO(hm_e, e_homerow_mod, E_HOMEROW_MOD, E, LCTRL)
+MT_MACRO(hm_i, i_homerow_mod, I_HOMEROW_MOD, I, LALT)
+MT_MACRO(hm_o, o_homerow_mod, O_HOMEROW_MOD, O, LGUI)
 
+MT_MACRO(hm_g, g_homerow_mod, G_HOMEROW_MOD, G, RALT)
 MT_MACRO(hm_t, t_homerow_mod, T_HOMEROW_MOD, N, LSHFT)
 MT_MACRO(hm_s, s_homerow_mod, S_HOMEROW_MOD, E, LCTRL)
 MT_MACRO(hm_r, r_homerow_mod, R_HOMEROW_MOD, I, LALT)
 MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
+
+LT_MACRO(lt_tab_num, layer_tap_tab_numbers, LAYER_TAP_TAB_NUMBERS, TAB, NUMPAD)
+LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENTER, NAVIGATION)
 
 / {
     behaviors {
@@ -112,19 +115,26 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
         TWO_KEYS_COMBO_ONE_KEYPRESS(combo_rbkt, 20, 33, RBKT)
         TWO_KEYS_COMBO_ONE_KEYPRESS(combo_rbrc, 18, 31, RBRC)
 
-        combo_base_to_qwerty {
+        combo_toggle_qwerty {
             timeout-ms = <50>;
             key-positions = <4 5 6 7>;
-            layers = <BASE_LAYER>;
-            bindings = <&to QWERTY_LAYER>;
+            layers = <BASE, QWERTY>;
+            bindings = <&tog QWERTY>;
         };
 
-        combo_qwerty_to_base {
+        combo_to_base {
             timeout-ms = <50>;
-            key-positions = <4 5 6 7>;
-            layers = <QWERTY_LAYER>;
-            bindings = <&to BASE_LAYER>;
-        };
+            key-positions = <50 53>;
+            bindings = <&to BASE>;
+        }
+
+        combo_toggle_bluetooth {
+            timeout-ms = <50>;
+            key-positions = <48 56>;
+            layers = <BASE, BLUETOOTH>;
+            bindings = <&tog BLUETOOTH>;
+        }
+
     };
 
     keymap {
@@ -132,61 +142,41 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
 
         base {
             bindings = <
-                &kp MINUS   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp EQUAL    
-                &kp GRAVE   &kp Q       &kp W       &kp F       &kp P       &kp B                               &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &kp BSLH 
-                &none       &hm_a       &hm_r       &hm_s       &hm_t       &kp G             &tdcaps           &kp M       &hm_n       &hm_e       &hm_i      &hm_o       &none    
-                &kp RALT    &kp Z       &kp X       &kp C       &kp D       &kp V                               &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp RALT
-                                                    &none       &kp ESC     &kp SPACE   &kp TAB     &kp ENTER   &kp BSPC    &kp DELETE  &none
+                &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp LC(W)
+                &kp SQT     &kp Q       &kp W       &kp F       &kp P       &kp B                               &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &kp BSLH
+                &sk LSHFT   &hm_a       &hm_r       &hm_s       &hm_t       &hm_g             &tdcaps           &hm_m       &hm_n       &hm_e       &hm_i      &hm_o       &sk LSHFT
+                &kp LA(TAB) &kp Z       &kp X       &kp C       &kp D       &kp V                               &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp LC(TAB)
+                                                    &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
 
-        layer_1 {
+        numpad {
             bindings = <
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
-                                                    &none      &none       &none        &none       &none       &none       &none       &none
+                &none       &kp GRAVE   &kp SLASH   &kp COMMA   &kp DOT     &kp LBRC                            &kp F1      &kp F2      &kp F3      &kp F4     &kp F5      &none
+                &none       &kp SQT     &kp N7      &kp N8      &kp N9      &kp LBKT                            &kp F6      &kp F7      &kp F8      &kp F9     &kp F10     &none
+                &none       &kp SEMI    &kp N4      &kp N5      &kp N6      &kp LPAR          &to NUMPAD        &kp F11     &kp LSHFT   &kp LCTRL   &kp LALT   &kp LGUI    &none
+                &none       &kp BSLH    &kp N1      &kp N2      &kp N3      &kp N0                              &kp F12     &kt LSHFT   &kt LCTRL   &kt LALT   &kt LGUI    &none
+                                                    &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &kp ENTER   &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
 
-        layer_2 {
+        navigation_media {
             bindings = <
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
-                                                    &none      &none       &none        &none       &none       &none       &none       &none
+                &none       &none       &none      &kp C_BRI_UP &kp C_VOL_UP &none                              &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)  &kp LC(Z)   &none    
+                &none       &none       &none      &kp C_BRI_DN &kp C_VOL_DN &none                              &kp K_AGAIN &kp K_PASTE &kp K_COPY  &kp K_CUT  &kp K_UNDO  &none    
+                &none       &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_MUTE        &to NAVIGATION    &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &none    
+                &none       &none       &none       &none       &none       &none                               &kp INSERT  &kp HOME    &kp PG_DOWN &kp PG_UP  &kp END     &none
+                                                    &kp ESC     &kp MINUS   &kp SPACE   &kp TAB     &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
 
-        layer_3 {
+        bluetooth_power {
             bindings = <
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
-                                                    &none      &none       &none        &none       &none       &none       &none       &none
-                >;
-        };
-
-        layer_4 {
-            bindings = <
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
-                                                    &none      &none       &none        &none       &none       &none       &none       &none
-                >;
-        };
-
-        media {
-            bindings = <
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none              &none             &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none      &none       &none                                &none       &none       &none       &none      &none       &none
-                                                    &none      &none       &none        &none       &none       &none       &none       &none
+                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none      &none       &bootloader
+                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none      &none       &sys_reset
+                &none   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0       &bt BT_CLR       &none       &none       &none       &none      &none       &none    
+                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none      &none       &none
+                                                 &to NAVIGATION &to NUMPAD  &to BASE    &bt BT_NXT  &bt BT_PRV  &out OUT_USB &out OUT_BLE &out OUT_TOG
                 >;
         };
 
