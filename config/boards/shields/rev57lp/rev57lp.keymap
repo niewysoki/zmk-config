@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CAPS";
             #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
+            tapping-term-ms = <200>;
             bindings = <&caps_word>, <&kp CAPSLOCK>;
         };
     };
