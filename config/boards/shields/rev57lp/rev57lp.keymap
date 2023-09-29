@@ -119,45 +119,54 @@ LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENT
         compatible = "zmk,keymap";
         base {
             bindings = <
-                &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp LC(W)
-                &kp SQT     &kp Q       &kp W       &kp F       &kp P       &kp B                               &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &kp BSLH
-                &sk LSHFT   &hm_a       &hm_r       &hm_s       &hm_t       &hm_g             &tdcaps           &hm_m       &hm_n       &hm_e       &hm_i      &hm_o       &sk LSHFT
-                &kp LA(TAB) &kp Z       &kp X       &kp C       &kp D       &kp V                               &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp LC(TAB)
+                &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp LC(W)
+                &kp SQT     &kp Q       &kp W       &kp F       &kp P       &kp B                               &kp J       &kp L       &kp U       &kp Y       &kp SEMI    &kp BSLH
+                &sk LSHFT   &hm_a       &hm_r       &hm_s       &hm_t       &hm_g             &tdcaps           &hm_m       &hm_n       &hm_e       &hm_i       &hm_o       &sk LSHFT
+                &kp LA(TAB) &kp Z       &kp X       &kp C       &kp D       &kp V                               &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH   &kp LC(TAB)
                                                     &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
 
         numpad {
             bindings = <
-                &none       &kp GRAVE   &kp SLASH   &kp COMMA   &kp DOT     &kp LBRC                            &kp F1      &kp F2      &kp F3      &kp F4     &kp F5      &none
-                &none       &kp SQT     &kp N7      &kp N8      &kp N9      &kp LBKT                            &kp F6      &kp F7      &kp F8      &kp F9     &kp F10     &none
-                &none       &kp SEMI    &kp N4      &kp N5      &kp N6      &kp LPAR          &to NUMPAD        &kp F11     &kp LSHFT   &kp LCTRL   &kp LALT   &kp LGUI    &none
-                &none       &kp BSLH    &kp N1      &kp N2      &kp N3      &kp N0                              &kp F12     &kt LSHFT   &kt LCTRL   &kt LALT   &kt LGUI    &none
+                &none       &kp GRAVE   &kp SLASH   &kp COMMA   &kp DOT     &kp LBRC                            &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &none
+                &none       &kp SQT     &kp N7      &kp N8      &kp N9      &kp LBKT                            &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &none
+                &none       &kp SEMI    &kp N4      &kp N5      &kp N6      &kp LPAR          &to NUMPAD        &kp F11     &kp LSHFT   &kp LCTRL   &kp LALT    &kp LGUI    &none
+                &none       &kp BSLH    &kp N1      &kp N2      &kp N3      &kp N0                              &kp F12     &kt LSHFT   &kt LCTRL   &kt LALT    &kt LGUI    &none
                                                     &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &kp ENTER   &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
-
+/**
         navigation_media {
             bindings = <
-                &none       &none       &none      &kp C_BRI_UP &kp C_VOL_UP &none                              &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)  &kp LC(Z)   &none    
-                &none       &none       &none      &kp C_BRI_DN &kp C_VOL_DN &none                              &kp K_AGAIN &kp K_PASTE &kp K_COPY  &kp K_CUT  &kp K_UNDO  &none    
-                &none       &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_MUTE        &to NAVIGATION    &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &none    
-                &none       &none       &none       &none       &none       &none                               &kp INSERT  &kp HOME    &kp PG_DOWN &kp PG_UP  &kp END     &none
+                &none       &none       &none      &kp C_BRI_UP &kp C_VOL_UP &none                              &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)   &none    
+                &none       &none       &none      &kp C_BRI_DN &kp C_VOL_DN &none                              &kp K_AGAIN &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &none    
+                &none       &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_MUTE        &to NAVIGATION    &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none    
+                &none       &none       &none       &none       &none       &none                               &kp INS     &kp HOME    &kp PG_DOWN &kp PG_UP   &kp END     &none
                                                     &kp ESC     &kp MINUS   &kp SPACE   &kp TAB     &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
-        /** 
+**/
+        navigation_media {
+            bindings = <
+                &none       &none       &none       &none       &none       &none                               &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)   &none    
+                &none       &none       &none       &none       &none       &none                               &kp K_AGAIN &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &none    
+                &none       &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_MUTE        &to NAVIGATION    &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none    
+                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
+                                                    &kp ESC     &kp MINUS   &kp SPACE   &kp TAB     &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
+                >;
+        };
 
         bluetooth_power {
             bindings = <
-                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none      &none       &bootloader
-                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none      &none       &sys_reset
-                &none   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0       &bt BT_CLR       &none       &none       &none       &none      &none       &none    
-                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none      &none       &none
+                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &bootloader
+                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &sys_reset
+                &none   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0       &bt BT_CLR       &none       &none       &none       &none       &none       &none    
+                &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
                                                  &to NAVIGATION &to NUMPAD  &to BASE    &bt BT_NXT  &bt BT_PRV  &out OUT_USB &out OUT_BLE &out OUT_TOG
                 >;
         };
-        **/
+
         qwerty {
             bindings = <
                 &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
