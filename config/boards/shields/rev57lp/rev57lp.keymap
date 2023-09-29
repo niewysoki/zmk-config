@@ -136,7 +136,6 @@ LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENT
                                                     &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &kp ENTER   &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
-        /** 
 
         navigation_media {
             bindings = <
@@ -147,6 +146,7 @@ LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENT
                                                     &kp ESC     &kp MINUS   &kp SPACE   &kp TAB     &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
+        /** 
 
         bluetooth_power {
             bindings = <
