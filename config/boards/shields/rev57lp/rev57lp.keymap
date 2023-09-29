@@ -120,7 +120,7 @@
             label = "A_HOMEROW_MOD";
             #binding-cells = <0>;
             tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LGUI a>, <&kp A>;
+            bindings = <&mt LGUI A>, <&kp A>;
         };
 
         tdcaps: tap_dance_caps {
