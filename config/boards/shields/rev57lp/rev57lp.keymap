@@ -9,32 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define MT_MACRO(SHORT, FULL, LABELSTR, KEY, MOD) \
-/ { \
-    behaviors { \
-        SHORT: FULL { \
-            compatible = "zmk,behavior-tap-dance"; \
-            label = "#LABELSTR"; \
-            #binding-cells = <0>; \
-            tapping-term-ms = <200>; \
-            bindings = <&kp KEY>, <&mt MOD KEY>; \
-        }; \
-    }; \
-};
-
-#define LT_MACRO(SHORT, FULL, LABELSTR, KEY, LAYER) \
-/ { \
-    behaviors { \
-        SHORT: FULL { \
-            compatible = "zmk,behavior-tap-dance"; \
-            label = "#LABELSTR"; \
-            #binding-cells = <0>; \
-            tapping-term-ms = <150>; \
-            bindings = <&kp KEY>, <&lt LAYER KEY>; \
-        }; \
-    }; \
-};
-
 #define TWO_KEYS_COMBO_ONE_KEYPRESS(NAME, POS1, POS2, KEY) \
         NAME { \
             timeout-ms = <50>; \
@@ -48,28 +22,112 @@
 #define BLUETOOTH  3
 #define QWERTY     4
 
-MT_MACRO(hm_m, m_homerow_mod, M_HOMEROW_MOD, M, RALT)
-MT_MACRO(hm_n, n_homerow_mod, N_HOMEROW_MOD, N, LSHFT)
-MT_MACRO(hm_e, e_homerow_mod, E_HOMEROW_MOD, E, LCTRL)
-MT_MACRO(hm_i, i_homerow_mod, I_HOMEROW_MOD, I, LALT)
-MT_MACRO(hm_o, o_homerow_mod, O_HOMEROW_MOD, O, LGUI)
+#define TAPPING_TERM_MS 200
 
-MT_MACRO(hm_g, g_homerow_mod, G_HOMEROW_MOD, G, RALT)
-MT_MACRO(hm_t, t_homerow_mod, T_HOMEROW_MOD, N, LSHFT)
-MT_MACRO(hm_s, s_homerow_mod, S_HOMEROW_MOD, E, LCTRL)
-MT_MACRO(hm_r, r_homerow_mod, R_HOMEROW_MOD, I, LALT)
-MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
-
-LT_MACRO(lt_tab_num, layer_tap_tab_numbers, LAYER_TAP_TAB_NUMBERS, TAB, NUMPAD)
-LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENTER, NAVIGATION)
 
 / {
     behaviors {
+        lt_tab_num: layer_tap_tab_numbers {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP_TAB_NUMBERS";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&lt NUMPAD TAB>, <&kp TAB>;
+        };
+
+        lt_ret_nav: layer_tap_enter_navigation {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP_ENTER_NAVIGATION";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&lt NAVIGATION ENTER>, <&kp ENTER>;
+        };
+
+        hm_m: m_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "M_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt RALT M>, <&kp M>;
+        };
+
+        hm_n: n_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "N_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt LSHFT N>, <&kp N>;
+        };
+
+        hm_e: e_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "E_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt LCTRL E>, <&kp E>;
+        };
+
+        hm_i: i_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "I_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt LALT I>, <&kp I>;
+        };
+
+        hm_o: o_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "O_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt LGUI O>, <&kp O>;
+        };
+
+        hm_g: g_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "G_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt RALT G>, <&kp G>;
+        };
+
+        hm_t: t_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "T_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt LSHFT T>, <&kp T>;
+        };
+
+        hm_s: s_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "S_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt LCTRL S>, <&kp S>;
+        };
+
+        hm_r: r_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "R_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt LALT R>, <&kp R>;
+        };
+
+        hm_a: a_homerow_mod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "A_HOMEROW_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            bindings = <&mt LGUI a>, <&kp A>;
+        };
+
         tdcaps: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CAPS";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
             bindings = <&caps_word>, <&kp CAPSLOCK>;
         };
     };
