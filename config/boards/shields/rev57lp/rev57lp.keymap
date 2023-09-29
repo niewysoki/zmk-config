@@ -22,107 +22,8 @@
 #define BLUETOOTH  3
 #define QWERTY     4
 
-#define TAPPING_TERM_MS 200
-
-
 / {
     behaviors {
-        lt_tab_num: layer_tap_tab_numbers {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_TAP_TAB_NUMBERS";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&lt NUMPAD TAB>, <&kp TAB>;
-        };
-
-        lt_ret_nav: layer_tap_enter_navigation {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_TAP_ENTER_NAVIGATION";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&lt NAVIGATION ENTER>, <&kp ENTER>;
-        };
-
-        hm_m: m_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "M_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt RALT M>, <&kp M>;
-        };
-
-        hm_n: n_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "N_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LSHFT N>, <&kp N>;
-        };
-
-        hm_e: e_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "E_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LCTRL E>, <&kp E>;
-        };
-
-        hm_i: i_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "I_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LALT I>, <&kp I>;
-        };
-
-        hm_o: o_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "O_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LGUI O>, <&kp O>;
-        };
-
-        hm_g: g_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "G_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt RALT G>, <&kp G>;
-        };
-
-        hm_t: t_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "T_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LSHFT T>, <&kp T>;
-        };
-
-        hm_s: s_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "S_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LCTRL S>, <&kp S>;
-        };
-
-        hm_r: r_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "R_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LALT R>, <&kp R>;
-        };
-
-        hm_a: a_homerow_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "A_HOMEROW_MOD";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-            bindings = <&mt LGUI A>, <&kp A>;
-        };
-
         tdcaps: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CAPS";
@@ -169,9 +70,10 @@
             bindings = <
                 &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp LC(W)
                 &kp SQT     &kp Q       &kp W       &kp F       &kp P       &kp B                               &kp J       &kp L       &kp U       &kp Y       &kp SEMI    &kp BSLH
-                &sk LSHFT   &hm_a       &hm_r       &hm_s       &hm_t       &hm_g             &tdcaps           &hm_m       &hm_n       &hm_e       &hm_i       &hm_o       &sk LSHFT
+                &sk LSHFT   &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &mt RALT G        &tdcaps           &mt RALT M  &mt LSHFT N &mt LCTRL E &mt LALT I  &mt LGUI O  &sk LSHFT
                 &kp LA(TAB) &kp Z       &kp X       &kp C       &kp D       &kp V                               &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH   &kp LC(TAB)
-                                                    &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
+                
+                &kp ESC &kp MINUS &kp SPACE   &lt NUMPAD TAB &lt NAVIGATION ENTER &kp BSPC &kp EQUAL &kp DELETE
                 >;
         };
 
@@ -181,7 +83,8 @@
                 &none       &kp SQT     &kp N7      &kp N8      &kp N9      &kp LBKT                            &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &none
                 &none       &kp SEMI    &kp N4      &kp N5      &kp N6      &kp LPAR          &to NUMPAD        &kp F11     &kp LSHFT   &kp LCTRL   &kp LALT    &kp LGUI    &none
                 &none       &kp BSLH    &kp N1      &kp N2      &kp N3      &kp N0                              &kp F12     &kt LSHFT   &kt LCTRL   &kt LALT    &kt LGUI    &none
-                                                    &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &kp ENTER   &kp BSPC    &kp EQUAL   &kp DELETE
+                
+                &kp ESC &kp MINUS &kp SPACE &lt NUMPAD TAB &kp ENTER &kp BSPC &kp EQUAL &kp DELETE
                 >;
         };
 
@@ -191,7 +94,8 @@
                 &none       &none       &none       &kp C_BRI_DN &kp C_VOL_DN &none                             &kp K_AGAIN &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &none
                 &none       &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_MUTE        &to NAVIGATION    &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none
                 &none       &none       &none       &none       &none       &none                               &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none
-                                                    &kp ESC     &kp MINUS   &kp SPACE   &kp TAB     &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
+                
+                &kp ESC &kp MINUS &kp SPACE &kp TAB &lt NAVIGATION ENTER &kp BSPC &kp EQUAL &kp DELETE
                 >;
         };
 
