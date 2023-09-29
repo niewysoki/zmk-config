@@ -42,28 +42,6 @@
             bindings = <&kp KEY>; \
         };
 
-
-// TODO:
-// - turn TAB and ENTER into layer keys
-// - turn ESC and DELETE into layer keys
-// - create four layers + qwerty and bluetooth (combo activations)
-// - fill four missing keys on base layer
-// - four layers v1:
-//   - left numpad
-//   - right numpad
-//   - left nav + fn
-//   - right nav + fn
-// - four layers v2:
-//   - navigation
-//   - function
-//   - numpad
-//   - shifted
-// - three layers:
-//   - numbers
-//   - navigation
-//   - media
-
-
 #define BASE       0
 #define NUMPAD     1
 #define NAVIGATION 2
@@ -82,8 +60,8 @@ MT_MACRO(hm_s, s_homerow_mod, S_HOMEROW_MOD, E, LCTRL)
 MT_MACRO(hm_r, r_homerow_mod, R_HOMEROW_MOD, I, LALT)
 MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
 
-// LT_MACRO(lt_tab_num, layer_tap_tab_numbers, LAYER_TAP_TAB_NUMBERS, TAB, NUMPAD)
-// LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENTER, NAVIGATION)
+LT_MACRO(lt_tab_num, layer_tap_tab_numbers, LAYER_TAP_TAB_NUMBERS, TAB, NUMPAD)
+LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENTER, NAVIGATION)
 
 / {
     behaviors {
@@ -139,14 +117,14 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
 
     keymap {
         compatible = "zmk,keymap";
-
+        /** 
         base {
             bindings = <
                 &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp LC(W)
                 &kp SQT     &kp Q       &kp W       &kp F       &kp P       &kp B                               &kp J       &kp L       &kp U       &kp Y      &kp SEMI    &kp BSLH
                 &sk LSHFT   &hm_a       &hm_r       &hm_s       &hm_t       &hm_g             &tdcaps           &hm_m       &hm_n       &hm_e       &hm_i      &hm_o       &sk LSHFT
                 &kp LA(TAB) &kp Z       &kp X       &kp C       &kp D       &kp V                               &kp K       &kp H       &kp COMMA   &kp DOT    &kp SLASH   &kp LC(TAB)
-                                                    &kp ESC     &kp MINUS   &kp SPACE   &none      &none        &kp BSPC    &kp EQUAL   &kp DELETE
+                                                    &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
 
@@ -156,7 +134,7 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
                 &none       &kp SQT     &kp N7      &kp N8      &kp N9      &kp LBKT                            &kp F6      &kp F7      &kp F8      &kp F9     &kp F10     &none
                 &none       &kp SEMI    &kp N4      &kp N5      &kp N6      &kp LPAR          &to NUMPAD        &kp F11     &kp LSHFT   &kp LCTRL   &kp LALT   &kp LGUI    &none
                 &none       &kp BSLH    &kp N1      &kp N2      &kp N3      &kp N0                              &kp F12     &kt LSHFT   &kt LCTRL   &kt LALT   &kt LGUI    &none
-                                                    &kp ESC     &kp MINUS   &kp SPACE   &none      &none        &kp BSPC    &kp EQUAL   &kp DELETE
+                                                    &kp ESC     &kp MINUS   &kp SPACE   &lt_tab_num &kp ENTER   &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
 
@@ -166,7 +144,7 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
                 &none       &none       &none      &kp C_BRI_DN &kp C_VOL_DN &none                              &kp K_AGAIN &kp K_PASTE &kp K_COPY  &kp K_CUT  &kp K_UNDO  &none    
                 &none       &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_MUTE        &to NAVIGATION    &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &none    
                 &none       &none       &none       &none       &none       &none                               &kp INSERT  &kp HOME    &kp PG_DOWN &kp PG_UP  &kp END     &none
-                                                    &kp ESC     &kp MINUS   &kp SPACE   &none      &none        &kp BSPC    &kp EQUAL   &kp DELETE
+                                                    &kp ESC     &kp MINUS   &kp SPACE   &kp TAB     &lt_ret_nav &kp BSPC    &kp EQUAL   &kp DELETE
                 >;
         };
 
@@ -179,7 +157,7 @@ MT_MACRO(hm_a, a_homerow_mod, A_HOMEROW_MOD, O, LGUI)
                                                  &to NAVIGATION &to NUMPAD  &to BASE    &bt BT_NXT  &bt BT_PRV  &out OUT_USB &out OUT_BLE &out OUT_TOG
                 >;
         };
-
+        **/
         qwerty {
             bindings = <
                 &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9     &kp N0      &kp DELETE    
