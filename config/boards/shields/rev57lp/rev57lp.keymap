@@ -126,14 +126,14 @@ LT_MACRO(lt_ret_nav, layer_tap_enter_navigation, LAYER_TAP_ENTER_NAVIGATION, ENT
             timeout-ms = <50>;
             key-positions = <50 53>;
             bindings = <&to BASE>;
-        }
+        };
 
         combo_toggle_bluetooth {
             timeout-ms = <50>;
             key-positions = <48 56>;
             layers = <BASE BLUETOOTH>;
             bindings = <&tog BLUETOOTH>;
-        }
+        };
 
     };
 
