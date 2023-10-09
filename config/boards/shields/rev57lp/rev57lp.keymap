@@ -43,17 +43,6 @@
             require-prior-idle-ms = <75>;
             bindings = <&kp>, <&kp>;
         };
-
-        mlt: my_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MY_LAYER_TAP";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <75>;
-            bindings = <&kp>, <&kp>;
-        };
     };
 
     combos {
@@ -76,13 +65,13 @@
 
     keymap {
         compatible = "zmk,keymap";
-        base {
+        base {ststst
             bindings = <
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &none                               &none       &kp N6      &kp N7      &kp N8      &kp N9      &kp N0    
                 &kp Q       &kp W       &kp F       &kp P       &kp B       &none                               &none       &kp J       &kp L       &kp U       &kp Y       &kp SQT   
                 &mhm RALT A &mhm LALT R &mhm LCTRL S &mhm LSHFT T &mhm LGUI G &none             &tdcaps         &none       &mhm LGUI M &mhm LSHFT N &mhm LCTRL E &mhm LALT I  &mhm RALT O
-                &kp Z  &kp X       &kp C       &kp D       &kp V       &none                               &none       &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH 
-                                        &kp ESC     &kp SPACE   &mlt NAVIGATION TAB &mlt MEDIA MINUS &mlt SPECIAL EQUAL &mlt NUMPAD ENTER   &kp BSPC    &kp DELETE
+                &kp Z       &kp X       &kp C       &kp D       &kp V       &none                               &none       &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH 
+                                        &kp ESC     &kp SPACE   &lt NAVIGATION TAB &lt MEDIA MINUS &lt SPECIAL EQUAL &lt NUMPAD ENTER   &kp BSPC    &kp DELETE
                 >;
         };
 
