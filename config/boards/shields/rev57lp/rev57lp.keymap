@@ -44,6 +44,16 @@
             bindings = <&kp>, <&kp>;
         };
 
+        mlt: my_layer_toggle {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_LAYER_TOGGLE";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&to>, <&kp>;
+        };
     };
 
     combos {
