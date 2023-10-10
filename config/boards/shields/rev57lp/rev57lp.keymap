@@ -44,16 +44,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        mlt: my_layer_toggle {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MY_LAYER_TOGGLE";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
-            bindings = <&to>, <&kp>;
-        };
     };
 
     combos {
@@ -82,7 +72,7 @@
                 &kp Q       &mhm LALT W &mhm LCTRL F &kp P      &kp B       &none                               &none       &kp J       &kp L       &mhm LCTRL U &mhm LALT Y &kp SQT   
                 &mhm RALT A &kp R       &kp S      &mhm LSHFT T &mhm LGUI G &none             &tdcaps           &none       &mhm LGUI M &mhm LSHFT N &kp E      &kp I       &mhm RALT O
                 &kp Z       &kp X       &kp C       &kp D       &kp V       &none                               &none       &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH 
-                                        &kp ESC &lt NAVIGATION SPACE &lt MEDIA TAB &mlt NAVIGATION MINUS &mlt NUMPAD EQUAL &lt SPECIAL ENTER &kp NUMPAD BSPC &kp DELETE
+                                        &kp ESC &lt NAVIGATION SPACE &lt MEDIA TAB &mlt NAVIGATION MINUS &mlt NUMPAD EQUAL &lt SPECIAL ENTER &lt NUMPAD BSPC &kp DELETE
                 >;
         };
 
