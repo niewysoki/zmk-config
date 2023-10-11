@@ -9,13 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define TWO_KEYS_COMBO_ONE_KEYPRESS(NAME, POS1, POS2, KEY) \
-        NAME { \
-            timeout-ms = <50>; \
-            key-positions = <POS1 POS2>; \
-            bindings = <&kp KEY>; \
-        };
-
 #define BASE       0
 #define NUMPAD     1
 #define SPECIAL    2
@@ -58,12 +51,18 @@
 
     combos {
         compatible = "zmk,combos";
-        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_lpar, 16, 28, LPAR)
-        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_lbkt, 15, 27, LBKT)
-        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_lbrc, 17, 29, LBRC)
-        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_rpar, 19, 32, RPAR)
-        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_rbkt, 20, 33, RBKT)
-        TWO_KEYS_COMBO_ONE_KEYPRESS(combo_rbrc, 18, 31, RBRC)
+
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <5 17>;
+            bindings = <&kp LBRC>;
+        };
+
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <6 18>;
+            bindings = <&kp RBRC>;
+        };
 
         combo_toggle_bluetooth {
             timeout-ms = <50>;
@@ -78,10 +77,10 @@
         compatible = "zmk,keymap";
         base {
             bindings = <
-                &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &none                               &none       &kp N6      &kp N7      &kp N8      &kp N9      &kp N0    
-                &kp Q       &mhm LALT W &mhm LCTRL F &kp P      &kp B       &none                               &none       &kp J       &kp L       &mhm LCTRL U &mhm LALT Y &kp SQT   
-                &mhm RALT A &kp R       &kp S      &mhm LSHFT T &mhm LGUI G &none             &tdcaps           &none       &mhm LGUI M &mhm LSHFT N &kp E      &kp I       &mhm RALT O
-                &kp Z       &kp X       &kp C       &kp D       &kp V       &none                               &none       &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH 
+                &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp LBKT                            &kp RBKT    &kp N6      &kp N7      &kp N8      &kp N9      &kp N0    
+                &kp Q       &mhm LALT W &mhm LCTRL F &kp P      &kp B       &kp LPAR                            &kp RPAR    &kp J       &kp L       &mhm LCTRL U &mhm LALT Y &kp SQT   
+                &mhm RALT A &mhm LALT R &mhm LCTRL S &mhm LSHFT T &mhm LGUI G &kp SEMI          &tdcaps         &kp BSLH    &mhm LGUI M &mhm LSHFT N &mhm LCTRL E &mhm LALT I &mhm RALT O
+                &kp Z       &kp X       &kp C       &kp D       &kp V       &kp MINUS                           &kp EQUAL   &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH 
                                         &kp ESC &lt NAVIGATION SPACE &lt MEDIA TAB &mlt NAVIGATION MINUS &mlt NUMPAD EQUAL &lt SPECIAL ENTER &lt NUMPAD BSPC &kp DELETE
                 >;
         };
@@ -90,9 +89,9 @@
             bindings = <
                 &kp GRAVE   &kp SEMI    &kp BSLH    &kp SLASH   &kp SQT     &none                               &none       &none       &none       &none       &none       &none       
                 &kp LBKT    &kp N7      &kp N8      &kp N9      &kp RBKT    &none                               &none       &none       &none       &kp LCTRL   &kp LALT    &none       
-                &kp EQUAL   &kp N4      &kp N5      &kp N6      &kp MINUS   &none             &tog NUMPAD       &none       &kp LGUI    &kp LSHFT   &none       &none       &kp RALT    
+                &kp EQUAL   &kp N4      &kp N5      &kp N6      &kp MINUS   &none             &tog NUMPAD       &none       &kp LGUI    &kp LSHFT   &kp LCTRL   &kp LALT    &kp RALT    
                 &kp COMMA   &kp N1      &kp N2      &kp N3      &kp DOT     &none                               &none       &kp LC(V)   &kp LC(C)   &kp LC(X)   &none       &none       
-                                                    &kp ESC     &kp SPACE   &kp N0      &to BASE    &to SPECIAL &kp ENTER   &kp BSPC    &kp DELETE
+                                                    &kp ESC     &kp N0      &kp SPACE   &to BASE    &to SPECIAL &kp ENTER   &kp BSPC    &kp DELETE
                 >;
         };
 
@@ -100,7 +99,7 @@
             bindings = <
                 &kp TILDE   &kp COLON   &kp PIPE    &kp QMARK   &kp DQT     &none                               &none       &none       &none       &none       &none       &none       
                 &kp LBRC    &kp AMPS    &kp STAR    &kp LPAR    &kp RBRC    &none                               &none       &none       &none       &kp LCTRL   &kp LALT    &none       
-                &kp PLUS    &kp DLLR    &kp PRCNT   &kp CARET   &kp UNDER   &none             &tog SPECIAL      &none       &kp LGUI    &kp LSHFT   &none       &none       &kp RALT    
+                &kp PLUS    &kp DLLR    &kp PRCNT   &kp CARET   &kp UNDER   &none             &tog SPECIAL      &none       &kp LGUI    &kp LSHFT   &kp LCTRL   &kp LALT    &kp RALT    
                 &kp LT      &kp EXCL    &kp AT      &kp HASH    &kp GT      &none                               &none       &kp LC(V)   &kp LC(C)   &kp LC(X)   &none       &none       
                                                     &kp ESC     &kp SPACE   &kp RPAR    &to BASE    &to NUMPAD  &kp ENTER   &kp BSPC    &kp DELETE
                 >;
@@ -110,7 +109,7 @@
             bindings = <
                 &none       &none       &none       &none       &none       &none                               &none       &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)   
                 &none       &kp LALT    &kp LCTRL   &none       &none       &none                               &none       &kp K_AGAIN &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  
-                &kp RALT    &none       &none       &kp LSHFT   &kp LGUI    &none             &tog NAVIGATION   &none       &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
+                &kp RALT    &kp LALT    &kp LCTRL   &kp LSHFT   &kp LGUI    &none             &tog NAVIGATION   &none       &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
                 &none       &none       &kp LC(X)   &kp LC(C)   &kp LC(V)   &none                               &none       &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     
                                                     &kp ESC     &kp SPACE   &kp TAB     &to MEDIA   &to BASE    &kp ENTER   &kp BSPC    &kp DELETE
                 >;
@@ -120,7 +119,7 @@
             bindings = <
                 &none       &none       &none       &none       &none       &none                               &none       &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      
                 &none       &kp LALT    &kp LCTRL   &none       &none       &none                               &none       &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     
-                &kp RALT    &none       &none       &kp LSHFT   &kp LGUI    &none             &tog MEDIA        &none       &kp C_BRI_UP &kp C_VOL_UP &kp C_MUTE &kp F11    &kp F12     
+                &kp RALT    &kp LALT    &kp LCTRL   &kp LSHFT   &kp LGUI    &none             &tog MEDIA        &none       &kp C_BRI_UP &kp C_VOL_UP &kp C_MUTE &kp F11    &kp F12     
                 &none       &none       &kp LC(X)   &kp LC(C)   &kp LC(V)   &none                               &none       &kp C_BRI_DN &kp C_VOL_DN &kp C_PP  &kp F13     &kp F14     
                                                     &kp ESC     &kp SPACE   &kp TAB   &to NAVIGATION &to BASE   &kp ENTER   &kp BSPC    &kp DELETE
                 >;
