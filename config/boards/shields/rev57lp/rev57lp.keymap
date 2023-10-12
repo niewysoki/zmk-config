@@ -54,15 +54,28 @@
 
         combo_lbrc {
             timeout-ms = <50>;
-            key-positions = <5 17>;
+            key-positions = <16 28>;
             bindings = <&kp LBRC>;
         };
 
         combo_rbrc {
             timeout-ms = <50>;
-            key-positions = <6 18>;
+            key-positions = <19 32>;
             bindings = <&kp RBRC>;
         };
+
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <15 27>;
+            bindings = <&kp LPAR>;
+        };
+
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <20 33>;
+            bindings = <&kp RPAR>;
+        };
+
 
         combo_toggle_bluetooth {
             timeout-ms = <50>;
@@ -87,9 +100,9 @@
 
         numpad {
             bindings = <
-                &kp GRAVE   &kp SEMI    &kp BSLH    &kp SLASH   &kp SQT     &none                               &none       &none       &none       &none       &none       &none       
+                &kp GRAVE   &kp EQUAL   &kp BSLH    &kp SLASH   &kp SQT     &none                               &none       &none       &none       &none       &none       &none       
                 &kp LBKT    &kp N7      &kp N8      &kp N9      &kp RBKT    &none                               &none       &none       &none       &kp LCTRL   &kp LALT    &none       
-                &kp EQUAL   &kp N4      &kp N5      &kp N6      &kp MINUS   &none             &tog NUMPAD       &none       &kp LGUI    &kp LSHFT   &kp LCTRL   &kp LALT    &kp RALT    
+                &kp SEMI    &kp N4      &kp N5      &kp N6      &kp MINUS   &none             &tog NUMPAD       &none       &kp LGUI    &kp LSHFT   &kp LCTRL   &kp LALT    &kp RALT    
                 &kp COMMA   &kp N1      &kp N2      &kp N3      &kp DOT     &none                               &none       &none       &kp LC(V)   &kp LC(C)   &kp LC(X)   &none       
                                                     &kp ESC     &kp N0      &kp SPACE   &to BASE    &to SPECIAL &kp ENTER   &kp BSPC    &kp DELETE
                 >;
@@ -97,9 +110,9 @@
 
         special {
             bindings = <
-                &kp TILDE   &kp COLON   &kp PIPE    &kp QMARK   &kp DQT     &none                               &none       &none       &none       &none       &none       &none       
+                &kp TILDE   &kp PLUS    &kp PIPE    &kp QMARK   &kp DQT     &none                               &none       &none       &none       &none       &none       &none       
                 &kp LBRC    &kp AMPS    &kp STAR    &kp LPAR    &kp RBRC    &none                               &none       &none       &none       &kp LCTRL   &kp LALT    &none       
-                &kp PLUS    &kp DLLR    &kp PRCNT   &kp CARET   &kp UNDER   &none             &tog SPECIAL      &none       &kp LGUI    &kp LSHFT   &kp LCTRL   &kp LALT    &kp RALT    
+                &kp COLON   &kp DLLR    &kp PRCNT   &kp CARET   &kp UNDER   &none             &tog SPECIAL      &none       &kp LGUI    &kp LSHFT   &kp LCTRL   &kp LALT    &kp RALT    
                 &kp LT      &kp EXCL    &kp AT      &kp HASH    &kp GT      &none                               &none       &none       &kp LC(V)   &kp LC(C)   &kp LC(X)   &none       
                                                     &kp ESC     &kp SPACE   &kp RPAR    &to BASE    &to NUMPAD  &kp ENTER   &kp BSPC    &kp DELETE
                 >;
