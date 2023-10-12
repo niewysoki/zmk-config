@@ -90,7 +90,7 @@
                 &kp GRAVE   &kp SEMI    &kp BSLH    &kp SLASH   &kp SQT     &none                               &none       &none       &none       &none       &none       &none       
                 &kp LBKT    &kp N7      &kp N8      &kp N9      &kp RBKT    &none                               &none       &none       &none       &kp LCTRL   &kp LALT    &none       
                 &kp EQUAL   &kp N4      &kp N5      &kp N6      &kp MINUS   &none             &tog NUMPAD       &none       &kp LGUI    &kp LSHFT   &kp LCTRL   &kp LALT    &kp RALT    
-                &kp COMMA   &kp N1      &kp N2      &kp N3      &kp DOT     &none                               &none       &kp LC(V)   &kp LC(C)   &kp LC(X)   &none       &none       
+                &kp COMMA   &kp N1      &kp N2      &kp N3      &kp DOT     &none                               &none       &none       &kp LC(V)   &kp LC(C)   &kp LC(X)   &none       
                                                     &kp ESC     &kp N0      &kp SPACE   &to BASE    &to SPECIAL &kp ENTER   &kp BSPC    &kp DELETE
                 >;
         };
@@ -100,7 +100,7 @@
                 &kp TILDE   &kp COLON   &kp PIPE    &kp QMARK   &kp DQT     &none                               &none       &none       &none       &none       &none       &none       
                 &kp LBRC    &kp AMPS    &kp STAR    &kp LPAR    &kp RBRC    &none                               &none       &none       &none       &kp LCTRL   &kp LALT    &none       
                 &kp PLUS    &kp DLLR    &kp PRCNT   &kp CARET   &kp UNDER   &none             &tog SPECIAL      &none       &kp LGUI    &kp LSHFT   &kp LCTRL   &kp LALT    &kp RALT    
-                &kp LT      &kp EXCL    &kp AT      &kp HASH    &kp GT      &none                               &none       &kp LC(V)   &kp LC(C)   &kp LC(X)   &none       &none       
+                &kp LT      &kp EXCL    &kp AT      &kp HASH    &kp GT      &none                               &none       &none       &kp LC(V)   &kp LC(C)   &kp LC(X)   &none       
                                                     &kp ESC     &kp SPACE   &kp RPAR    &to BASE    &to NUMPAD  &kp ENTER   &kp BSPC    &kp DELETE
                 >;
         };
@@ -110,7 +110,7 @@
                 &none       &none       &none       &none       &none       &none                               &none       &kp LC(Y)   &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)   
                 &none       &kp LALT    &kp LCTRL   &none       &none       &none                               &none       &kp K_AGAIN &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  
                 &kp RALT    &kp LALT    &kp LCTRL   &kp LSHFT   &kp LGUI    &none             &tog NAVIGATION   &none       &kp PSCRN   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
-                &none       &none       &kp LC(X)   &kp LC(C)   &kp LC(V)   &none                               &none       &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     
+                &none       &kp LC(X)   &kp LC(C)   &kp LC(V)   &none       &none                               &none       &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     
                                                     &kp ESC     &kp SPACE   &kp TAB     &to MEDIA   &to BASE    &kp ENTER   &kp BSPC    &kp DELETE
                 >;
         };
@@ -120,7 +120,7 @@
                 &none       &none       &none       &none       &none       &none                               &none       &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      
                 &none       &kp LALT    &kp LCTRL   &none       &none       &none                               &none       &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     
                 &kp RALT    &kp LALT    &kp LCTRL   &kp LSHFT   &kp LGUI    &none             &tog MEDIA        &none       &kp C_BRI_UP &kp C_VOL_UP &kp C_MUTE &kp F11    &kp F12     
-                &none       &none       &kp LC(X)   &kp LC(C)   &kp LC(V)   &none                               &none       &kp C_BRI_DN &kp C_VOL_DN &kp C_PP  &kp F13     &kp F14     
+                &none       &kp LC(X)   &kp LC(C)   &kp LC(V)   &none       &none                               &none       &kp C_BRI_DN &kp C_VOL_DN &kp C_PP  &kp F13     &kp F14     
                                                     &kp ESC     &kp SPACE   &kp TAB   &to NAVIGATION &to BASE   &kp ENTER   &kp BSPC    &kp DELETE
                 >;
         };
