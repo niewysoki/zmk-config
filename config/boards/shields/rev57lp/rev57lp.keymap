@@ -41,11 +41,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MY_LAYER_TOGGLE";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "tap-preffered";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
-            bindings = <&to>, <&kp>;
+            require-prior-idle-ms = <75>;
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -80,8 +80,8 @@
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp LBKT                            &kp RBKT    &kp N6      &kp N7      &kp N8      &kp N9      &kp N0    
                 &kp Q       &mhm LALT W &mhm LCTRL F &kp P      &kp B       &kp LPAR                            &kp RPAR    &kp J       &kp L       &mhm LCTRL U &mhm LALT Y &kp SQT   
                 &mhm RALT A &mhm LALT R &mhm LCTRL S &mhm LSHFT T &mhm LGUI G &kp SEMI          &tdcaps         &kp BSLH    &mhm LGUI M &mhm LSHFT N &mhm LCTRL E &mhm LALT I &mhm RALT O
-                &kp Z       &kp X       &kp C       &kp D       &kp V       &kp MINUS                           &kp EQUAL   &kp K       &kp H       &kp COMMA   &kp DOT     &kp SLASH 
-                                        &kp ESC &lt NAVIGATION SPACE &lt MEDIA TAB &mlt NAVIGATION MINUS &mlt NUMPAD EQUAL &lt SPECIAL ENTER &lt NUMPAD BSPC &kp DELETE
+                &mhm RALT Z &kp X       &kp C       &kp D       &kp V       &kp MINUS                           &kp EQUAL   &kp K       &kp H       &kp COMMA   &kp DOT     &mhm RALT SLASH 
+                                        &kp ESC &mlt NAVIGATION SPACE &mlt MEDIA TAB &mlt NAVIGATION MINUS &mlt NUMPAD EQUAL &mlt SPECIAL ENTER &mlt NUMPAD BSPC &kp DELETE
                 >;
         };
 
